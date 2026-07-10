@@ -17,6 +17,10 @@ class HomePageView(TemplateView): #OOP - Object Oriented Programming
         return context
 
 
+class AboutPageView(TemplateView):
+    template_name = "pages/about.html"
+
+
 # Function Based View
 def contact_me(request):
     #return HttpResponse("Hello World from a Function Based View")
@@ -27,3 +31,7 @@ def contact_me(request):
     }
 
     return render(request, "pages/contact.html", contact_info)
+
+
+# def about_me_view(request):
+#     return render(request, "pages/about.html")
